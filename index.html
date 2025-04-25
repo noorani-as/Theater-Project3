@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cinema Theater 🎬</title>
+
+  <link rel="icon" href="favicon.jpg" type="image/png">
+  
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <section class="cinema">
+    <header>
+      <h1> Noorani's Cinema Theater 🎥</h1>
+      <div class="marquee-wrapper">
+        <marquee class="marquee" behavior="scroll" direction="left" scrollamount="10">
+          🎬 Sit back, relax, and enjoy the show — your cinematic escape starts now! 🍿
+        </marquee>
+      </div>
+    </header>
+
+    <div class="screen-container">
+      <div class="screen-border">
+        <video controls>
+          <source src="media/trailer.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button onclick="replayVideo()">Play Again</button>
+      <button onclick="rateMovie()">Rate Movie</button>
+    </div>
+  </section>
+
+  <script>
+    function replayVideo() {
+      const video = document.querySelector('video');
+      video.currentTime = 0;
+      video.play();
+    }
+
+    function rateMovie() {
+      alert('Thanks for watching! I hope you liked it!');
+    }
+  </script>
+</body>
+</html>
